@@ -43,12 +43,6 @@ public class OldSchemaDaoImpl extends AbstractMySQLDao implements OldSchemaDao {
 	}
 
 	@Override
-	public int insert(OldSchema input) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
 	public void setConnection(Connection connection) {
 		this.connection = connection;
 	}

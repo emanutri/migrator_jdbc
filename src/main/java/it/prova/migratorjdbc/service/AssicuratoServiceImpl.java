@@ -1,8 +1,6 @@
 package it.prova.migratorjdbc.service;
 
 import java.sql.Connection;
-import java.util.ArrayList;
-import java.util.List;
 
 import it.prova.migratorjdbc.connection.MyConnection;
 import it.prova.migratorjdbc.dao.AssicuratoDao;
@@ -19,20 +17,20 @@ public class AssicuratoServiceImpl implements AssicuratoService {
 		this.assicuratoDao = assicuratoDao;
 	}
 
-	@Override
-	public List<Assicurato> listAll() throws Exception {
-		List<Assicurato> result = new ArrayList<>();
-		try (Connection connection = MyConnection.getConnection(IConstants.DRIVER_NAME,
-				IConstants.CONNECTION_URL_NEW)) {
-			assicuratoDao.setConnection(connection);
-			result = assicuratoDao.list();
-
-		} catch (Exception e) {
-			e.printStackTrace();
-			throw e;
-		}
-		return result;
-	}
+//	@Override
+//	public List<Assicurato> listAll() throws Exception {
+//		List<Assicurato> result = new ArrayList<>();
+//		try (Connection connection = MyConnection.getConnection(IConstants.DRIVER_NAME,
+//				IConstants.CONNECTION_URL_NEW)) {
+//			assicuratoDao.setConnection(connection);
+//			result = assicuratoDao.list();
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			throw e;
+//		}
+//		return result;
+//	}
 
 	@Override
 	public int inserisciNuovo(Assicurato input) throws Exception {

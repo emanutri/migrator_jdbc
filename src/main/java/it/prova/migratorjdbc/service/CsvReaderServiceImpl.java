@@ -32,6 +32,7 @@ public class CsvReaderServiceImpl{
 			assicurato.setDataNascita(Date.valueOf(assicuratoString[4]));
 			assicurato.setNuoviSinistri(Integer.valueOf(assicuratoString[5]));
 			assicuratiDaVecchioDb.add(assicurato);
+			System.out.println(i);
 		}
 		return assicuratiDaVecchioDb;
 	}
